@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monomaniac+One&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Monomaniac+One&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Monomaniac+One&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000C58;
+        }
+
+        .navbar-section {
+            display: flex;
+            justify-content: space-between;
+            background-color: #060135;
+        }
+
+        .navbar-section h1 {
+            font-family: Bebas Neue;
+            font-size: 32px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-left: 20px;
+        }
+
+        .menu-bar {
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+
+        .menu-bar a {
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 500;
+            color: #FFFFFF;
+            padding: 32px;
+        }
+
+        .content-section {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .content-section .content-text {
+            margin-top: 50px;
+
+
+        }
+
+        .content-section h1 {
+            font-family: Bebas Neue;
+            font-size: 101px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+
+        }
+
+        .content-section h3 {
+            font-family: Prompt;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+
+        }
+
+
+        .content-btn button {
+            font-family: Prompt;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0A0A0A;
+            background-color: #7A99E9;
+            border-radius: 100px;
+            padding: 20px 24px;
+        }
+
+        .content-social {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .content-social i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222222;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            margin: 10px;
+        }
+
+
+        .content-img {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 100px;
+        }
+
+        .content-img img {
+            width: 500px;
+            height: 600px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 27px;
+        }
+
+        /* Aboutme-section */
+        .aboutme-text {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .aboutme-text h1 {
+            font-family: Bebas Neue;
+            font-size: 101px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin: 0;
+            margin-left: 150px;
+            margin-top: 150px;
+        }
+
+        .aboutme-textdetail {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aboutme-text h3 {
+            display: flex;
+            justify-content: flex-end;
+            font-family: Prompt;
+            font-size: 32px;
+            font-weight: 500;
+            color: #FFFFFF;
+            margin-top: 150px;
+            margin-right: 50px;
+
+        }
+
+        .aboutme-textdetail h4 {
+            display: flex;
+            justify-content: flex-end;
+            font-family: Prompt;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+            margin: 0;
+            margin-right: 200px;
+        }
+
+        .aboutme-img {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .aboutme-img img {
+            width: 1300px;
+            height: 800px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 25px;
+        }
+
+        .aboutme-social {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 280px;
+            margin-top: 20px;
+            gap: 20px;
+
+
+        }
+
+
+        .aboutme-btn button {
+            background-color: #7A99E9;
+            border-radius: 100px;
+            padding: 20px 20px;
+            font-family: Prompt;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0A0A0A;
+
+
+        }
+
+        .aboutme-social i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222222;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+
+        }
+
+        /* Capabilities - section */
+        .Capabilities-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 150px;
+        }
+
+        .Capabilities-text h1 {
+            font-family: Bebas Neue;
+            font-size: 76px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-left: 100px;
+        }
+
+        .Capabilities-text h3 {
+            font-family: Prompt;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+            margin-right: 100px;
+            margin-top: 70px;
+        }
+
+        .Capabilities-btn1 {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 150px;
+            gap: 10px;
+        }
+
+        .Capabilities-btn1 button {
+            border: 1px solid#484848;
+            border-radius: 100px;
+            background: none;
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFFFFF;
+            padding: 20px 40px;
+        }
+
+        .Capabilities-btn2 {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 150px;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .Capabilities-btn2 button {
+            border: 1px solid#484848;
+            border-radius: 100px;
+            background: none;
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFFFFF;
+            padding: 20px 40px;
+        }
+
+        /* Experience-section */
+        .Experience-text {
+            margin-top: 100px;
+        }
+
+        .Experience-text1 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0 100px;
+        }
+
+        .Experience-text2 {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .Experience-text3 {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .Experience-text4 {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .Experience-text1 h1 {
+            display: flex;
+            justify-content: flex-start;
+            font-family: Bebas Neue;
+            font-size: 76px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin: 0;
+            margin-top: 30px;
+        }
+
+        .Experience-text1 h3 {
+            font-family: Manrope;
+            font-size: 24px;
+            font-weight: 500;
+            color: #FFFFFF;
+            margin-top: 60px;
+            margin-right: 10px;
+        }
+
+        .Experience-text1 h4 {
+            font-family: Manrope;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+            margin-top: 70px;
+            margin-right: 30px;
+        }
+
+        .Experience-text2 p {
+            font-family: Prompt;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+            margin-right: 120px;
+        }
+
+        .Experience-text3 h3 {
+            font-family: Manrope;
+            font-size: 24px;
+            font-weight: 500;
+            color: #FFFFFF;
+            margin-right: 340px;
+        }
+
+        .Experience-text3 h4 {
+            font-family: Manrope;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+            margin-right: 100px;
+        }
+
+        .Experience-text4 p {
+            font-family: Prompt;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+            margin-right: 160px;
+        }
+
+        /* connect-section */
+        .connect-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 100px;
+            gap: 50px;
+        }
+
+        .connect-text {
+            flex: 2;
+
+        }
+
+        .connect-text h1 {
+            font-family: Bebas Neue;
+            font-size: 76px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        .connect-text h3 {
+            font-family: Manrope;
+            font-size: 18px;
+            font-weight: 400;
+            color: #C7C7C7;
+        }
+
+        .connect-text h3 span {
+            font-family: Manrope;
+            font-size: 18px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+
+        .connect-social i {
+            font-size: 20px;
+        }
+
+        .connect-form {
+            flex: 1;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 500;
+            color: #C7C7C7;
+        }
+
+        .form-group input,
+        textarea {
+            background-color: #060135;
+            border-radius: 4px;
+            padding: 12px 16px;
+            width: 650px;
+        }
+
+        .connect-section button {
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 100px;
+            padding: 20px 40px;
+            margin-top: 30px;
+            background-color: #7A99E9;
+        }
+
+        /* footer-section */
+        .footer-section{
+            display: flex;
+            justify-content: center;
+        }
+        .footer-section p{
+            font-family: Prompt;
+            font-size: 16px;
+            font-weight: 500;
+            color: #C7C7C7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar-section -->
+    <div class="navbar-section">
+        <h1>Patcharin Thonglam</h1>
+        <div class="menu-bar">
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <!-- Content-section -->
+    <div class="content-section">
+        <div class="content-text">
+            <h1>HI, I AM <br> PATCHARIN T.</h1>
+            <h3>นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย <br> ที่มีความหลงใหลในการสร้าง
+                เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้</h3>
+            <div class="content-social">
+                <div class="content-btn">
+                    <button>CONTACT ME<span style="margin-left: 20px;">&#11044;</span></button>
+                </div>
+                <i class="fa-brands fa-linkedin-in" style="color: #7A99E9;"></i>
+                <i class="fa-brands fa-github" style="color: #7A99E9;"></i>
+            </div>
+        </div>
+        <div class="content-img">
+            <img src="./images/me.JPG" alt="me">
+        </div>
+    </div>
+
+    <!-- Aboutme-section -->
+    <div class="aboutme-section">
+
+        <div class="aboutme-text">
+            <h1>ABOUT ME</h1>
+            <h3>ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงาน <br>อยู่ในกรุงเทพฯ กำลังมองหาโอกาสที่น่าตื่นเต้น <br>
+                ในการ ทำงานมีพื้นฐานการศึกษาด้าน <br> วิศวกรรมซอฟต์แวร์</h3>
+        </div>
+        <div class="aboutme-textdetail">
+
+            <h4>ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์ <br> มีความกระตือรือร้นและอยากรู้
+                อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ <br> ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ <br>
+                FIFA, Diablo กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+            </h4>
+        </div>
+
+        <div class="aboutme-social">
+            <div class="aboutme-btn">
+                <button>DOWNLOAD RESUME<span style="margin-left: 20px;">&#11044;</span></button>
+            </div>
+            <i class="fa-brands fa-linkedin-in" style="color: #7A99E9;"></i>
+            <i class="fa-brands fa-github" style="color: #7A99E9;"></i>
+        </div>
+        <div class="aboutme-img">
+           <img src="./images/me2.JPG" alt="me">
+        </div>
+    </div>
+
+    <!-- Capabilities - section -->
+    <div class="Capabilities-section">
+        <div class="Capabilities-text">
+            <h1>My Capabilities</h1>
+            <h3>ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การ <br> ออกแบบ UX/UI
+                ฐานข้อมูล</h3>
+        </div>
+
+        <div class="Capabilities-btn1">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JAVASCRIPT</button>
+            <button>FLUTTER</button>
+        </div>
+        <div class="Capabilities-btn2">
+            <button>DART</button>
+            <button>loT</button>
+            <button>REACT</button>
+            <button>DATABASE</button>
+        </div>
+    </div>
+
+    <!-- Experience-section -->
+    <div class="Experience-section">
+        <div class="Experience-text">
+            <div class="Experience-text1">
+                <h1>MY EXPERIENCE</h1>
+                <h3>Freelance Developer</h3>
+                <h4>Nov 2023 - Present</h4>
+            </div>
+            <div class="Experience-text2">
+                <p>พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้ React.js ทำงานร่วมกับทีม <br> ออกแบบ
+                    UX/UI เพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจปรับปรุงความเร็วในการโหลด <br>
+                    เว็บไซต์ด้วยเทคนิคการเพิ่มประสิทธิภาพต่างๆร่วมพัฒนาและดูแลไลบรารีคอมโพเนนต์ภายใน <br> องค์กร</p>
+            </div>
+            <div class="Experience-text3">
+                <h3>Front-End Intern</h3>
+                <h4>Sep 2023 - Nov 2023</h4>
+            </div>
+            <div class="Experience-text4">
+                <p>พัฒนาเว็บไซต์ลูกค้าโดยใช้HTML,CSSและJavaScript <br>ช่วยปรับปรุงการเข้าถึง(Accessibility)
+                    ของเว็บไซต์ให้สอดคล้องกับมารตฐาน WCAG <br>ทำงานร่วมกับทีมแบ็คเอนด์เพื่อเชื่อมต่อAPI</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- connect-section -->
+    <div class="connect-section">
+        <div class="connect-text">
+            <h1>LET'S CONNECT</h1>
+            <h3>Say hello at <SPan>6852D10009@sau.ac.th</SPan> <br>For more info, here's my <Span>resume</Span></h3>
+            <div class="connect-social">
+                <i class="fa-brands fa-linkedin-in" style="color: #7A99E9;"></i>
+                <i class="fa-brands fa-github" style="color: #7A99E9;"></i>
+                <i class="fa-brands fa-x-twitter" style="color: #7A99E9;"></i>
+                <i class="fa-brands fa-instagram" style="color: #7A99E9;"></i>
+            </div>
+        </div>
+
+        <div class="connect-form"></div>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5"></textarea>
+            </div>
+
+
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+
+    <!-- Footer-section -->
+    <div class="footer-section">
+        <p>© 2025 Created by SAU-Dev-Team</p>
+    </div>
+</body>
+
+</html>

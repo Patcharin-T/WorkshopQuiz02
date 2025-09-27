@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+            .body{
+                margin: 0;
+                padding: 0;
+            }    
+            .portfolio-section{
+                background-color: #030000;
+                width: 100%;
+                padding: 40px;
+            }
+            .portfolio-navbar{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 80px;
+                
+            }
+            .portfolio-navbar h1{
+                font-family: Inter;
+                font-size: 40px;
+                font-weight: 700;
+                color: #FFFFFF;
+            }
+            .portfolio-navbar a{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+            .portfolio-navbar #portfolio{
+                color: #FFE207;
+            }
+            .portfolio-navbar a:hover{
+                color: #FFE207;
+            }
+            .portfolio-navbar button{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 600;
+                color: #FFFFFF;
+                border: 1px solid#FFFFFF;
+                border-radius: 30px;
+                background: transparent;
+                padding: 10px 30px;
+            }
+            .portfolio-title{
+                margin-top: 60px;
+                display: flex;
+                justify-content: space-around;
+                color: #FFFFFF;
+            }
+          
+            .portfolio-title .title1 h1{
+                margin-top: 0;
+                margin-left: 50px;
+                font-family: Lora;
+                font-size: 40px;
+                font-weight: 600;
+                color: #FFFFFF;
+                
+            }
+            .portfolio-title .title2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 60px;
+                margin-right: 200px;
+                
+            }
+           
+            .portfolio-title .title2 h1{
+                font-family: Lora;
+                font-size: 30px;
+                font-weight: 500;
+                color: #FFFFFF;
+                margin-bottom: 0;
+            }
+            .portfolio-title .title2 p{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                color: #ffffff70;
+            }
+            .portfolio-title .title2 .icon{
+                display: flex;
+                justify-content: center;
+            } 
+            .portfolio-title .title2 button{
+                font-family: Inter;
+                font-size: 20px;
+                color: #FFFFFF;
+                background: transparent;
+                border: 1px solid #FFFFFF;
+                border-radius: 50px;
+                padding: 10px 30px;
+            }
+            .portfolio-title .title2 i{
+                display: flex;
+                font-size: 40px;
+               margin-left: 50px;
+                
+            }
+            .portfolio-title .title2 span{
+                display: flex;
+                align-items: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            /* learnify-section */
+            .learnify-section{
+                margin-top: 200px;
+            }
+            .learnify-title{
+                display: flex;
+                justify-content: space-around;
+                
+            }
+            .learnify-title .title1{
+                display: flex;
+                flex-direction: column;
+            }
+            .learnify-title .title2{
+                display: flex;
+                justify-content: flex-end;
+            }
+            .learnify-title .title1 h1{
+                text-align: center;
+                margin-left: 30px;
+                margin-bottom: 0;
+                font-family: Lora;
+                font-size: 40px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+            .learnify-title .title1 h3{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                color: #ffffff70;
+            }
+
+            .learnify-title .title2{
+                margin-top: 100px;
+            }
+            .learnify-title .title2 img{
+                width: 504px;
+                height: 251px;
+            }
+            .learnify-title .title1 .icon{
+                display: flex;
+                justify-content: center;
+            } 
+            .learnify-title .title1 button{
+                font-family: Inter;
+                font-size: 20px;
+                color: #FFFFFF;
+                background: transparent;
+                border: 1px solid #FFFFFF;
+                border-radius: 50px;
+                padding: 10px 30px;
+            }
+            .learnify-title .title1 i{
+                display: flex;
+                font-size: 40px;
+               margin-left: 50px;
+                color: #FFFFFF;
+            }
+            .learnify-title .title1 span{
+                display: flex;
+                align-items: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+
+            /* Animex-section */
+            .animex-section{
+                margin-top: 200px;
+            }
+            .animex-title{
+                display: flex;
+                justify-content: space-around;
+            }
+             .animex-title .title1{
+                display: flex;
+                justify-content: flex-start;
+            }
+            .ainmex-title .title1 img{
+                width: 463px;
+                height: 298px;
+            }
+            .animex-title .title2{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .animex-title .title2 h1{
+                text-align: center;
+                margin-left: 30px;
+                margin-bottom: 0;
+                font-family: Lora;
+                font-size: 40px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+             .animex-title .title2 h3{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                color: #ffffff70;
+            }
+             .animex-title .title2 .icon{
+                display: flex;
+                justify-content: center;
+            } 
+            .animex-title .title2 button{
+                font-family: Inter;
+                font-size: 20px;
+                color: #FFFFFF;
+                background: transparent;
+                border: 1px solid #FFFFFF;
+                border-radius: 50px;
+                padding: 10px 30px;
+            }
+            .animex-title .title2 i{
+                display: flex;
+                font-size: 40px;
+               margin-left: 50px;
+               color: #FFFFFF;
+                
+            }
+            .animex-title .title2 span{
+                display: flex;
+                align-items: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+
+            /* techz-section */
+            .techz-section{
+                margin-top: 200px;
+            }
+             .techz-title{
+                display: flex;
+                justify-content: space-around;
+            }
+             .techz-title .title1{
+                display: flex;
+                flex-direction: column;
+            }
+            .techz-title .title1 h1{
+                text-align: center;
+                margin-left: 30px;
+                margin-bottom: 0;
+                font-family: Lora;
+                font-size: 40px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+            .techz-title .title1 h3{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                color: #ffffff70;
+            }
+            .techz-title .title1 .icon{
+                display: flex;
+                justify-content: center;
+            } 
+            .techz-title .title1 button{
+                font-family: Inter;
+                font-size: 20px;
+                color: #FFFFFF;
+                background: transparent;
+                border: 1px solid #FFFFFF;
+                border-radius: 50px;
+                padding: 10px 30px;
+            }
+            .techz-title .title1 i{
+                display: flex;
+                font-size: 40px;
+               margin-left: 50px;
+               color: #FFFFFF;
+                
+            }
+            .techz-title .title1 span{
+                display: flex;
+                align-items: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+             .techz-title .title2{
+                display: flex;
+                justify-content: flex-end;
+            }
+            .techz-title .title2{
+                margin-top: 100px;
+            }
+            .techz-title .title2 img{
+                width: 483px;
+                height: 371px;
+            }
+        </style>
+</head>
+<body>
+    <div class="portfolio-section">
+        <div class="portfolio-navbar">
+            <h1>Earn SAU</h1>
+            <a href="./index.html">Home</a>
+            <a href="./aboutus.html">About</a>
+            <a href="./portfolio.html" id="portfolio">Portfolio</a>
+            <a href="./contact.html">
+                <button>Let’s talk</button>
+            </a>
+        </div>
+
+        <div class="portfolio-title">
+                <div class="title1">
+                    <h1>Portfolio</h1>
+                    <img src="./images/portfolio-img.png" alt="">
+                </div>
+                <div class="title2">
+                    <h1>Bikes and Beards</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Nesciunt rem odit labore unde nemo omnis sequi hic sit <br> laudantium repellendus recusandae vitae ea laborum, <br> ipsa nisi eos autem. Blanditiis consequuntur velit <br> nesciunt aperiam odit excepturi repellat libero in enim <br> praesentium! Ex dicta est suscipit ipsam voluptate <br> tempora voluptatum quam distinctio minus saepe nobis <br> nulla amet fugiat sit autem deserunt asperiores vitae ea, <br> libero sed! Libero fugit non.</p>
+                    <div class="icon">
+                        <button>View</button>
+                        <i class="fa-brands fa-github"></i><span>Git code</span>
+                    </div>
+                </div>
+        </div>
+        
+        <!-- learnify-section -->
+        <div class="learnify-section">
+            <div class="learnify-title">
+                <div class="title1">
+                    <h1>Learnify</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Nesciunt rem odit labore unde nemo omnis sequi <br> hic sit laudantium repellendus recusandae vitae ea <br> laborum, ipsa nisi eos autem. Blanditiis consequuntur <br> velit nesciunt aperiam odit excepturi repellat libero in <br> enim praesentium! Ex dicta est suscipit ipsam <br> voluptate tempora voluptatum quam distinctio minus <br> saepe nobis nulla amet fugiat sit autem deserunt <br> asperiores vitae ea, libero sed! Libero fugit non, <br> placeat nulla.</h3>
+                    <div class="icon">
+                        <button>View</button>
+                        <i class="fa-brands fa-github"></i><span>Git code</span>
+                    </div>
+                </div>
+                <div class="title2">
+                    <img src="./images/portfolio2-img.png" alt="portfolio2-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- animex-section -->
+        <div class="animex-section">
+            <div class="animex-title">
+                <div class="title1">
+                    <img src="./images/portfolio3-img.png" alt="portfolio3-img">
+                </div>
+                <div class="title2">
+                    <h1>Anime-X</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Nesciunt rem odit labore unde nemo omnis sequi hic sit <br> laudantium repellendus recusandae vitae ea laborum, <br> ipsa nisi eos autem. Blanditiis consequuntur velit <br> nesciunt aperiam odit excepturi repellat libero in enim <br> praesentium! Ex dicta est suscipit ipsam voluptate <br> tempora voluptatum quam distinctio minus saepe nobis <br> nulla amet fugiat sit autem.</h3>
+                    <div class="icon">
+                        <button>View</button>
+                        <i class="fa-brands fa-github"></i><span>Git code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- texhz-section -->
+         <div class="techz-section">
+            <div class="techz-title">
+                <div class="title1">
+                    <h1>Texh-Z</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Nesciunt rem odit labore unde nemo omnis sequi <br> hic sit laudantium repellendus recusandae vitae ea <br> laborum, ipsa nisi eos autem. Blanditiis consequuntur <br> velit nesciunt aperiam odit excepturi repellat libero in <br> enim  praesentium! Ex dicta est suscipit ipsam <br> voluptate tempora voluptatum quam distinctio minus <br> saepe nobis nulla amet fugiat sit autem deserunt <br> asperiores vitae ea, libero sed! Libero fugit non, <br> placeat nulla quae odio asperiores ratione! <br> Accusantium placeat dolorem minus eos excepturi <br> modi.Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Nesciunt rem odit.</h3>
+                    <div class="icon">
+                        <button>View</button>
+                        <i class="fa-brands fa-github"></i><span>Git code</span>
+                    </div>
+                </div>
+                <div class="title2">
+                    <img src="./images/portfolio4-img.png" alt="portfolio4-img">
+                </div>
+            </div>
+         </div>
+    </div>    
+</body>
+</html>

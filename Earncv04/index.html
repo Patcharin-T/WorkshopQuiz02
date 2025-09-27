@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+            .body{
+                margin: 0;
+                padding: 0;
+            }    
+            .home-section{
+                background-color: #030000;
+                width: 100%;
+                padding: 40px;
+            }
+            .home-navbar{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                /* margin: 0; */
+            }
+            .home-navbar h1{
+                font-family: Inter;
+                font-size: 40px;
+                font-weight: 700;
+                color: #FFFFFF;
+            }
+            .home-navbar a{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+            .home-navbar #home{
+                color: #FFE207;
+            }
+            .home-navbar a:hover{
+                color: #FFE207;
+            }
+            .home-navbar button{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 600;
+                color: #FFFFFF;
+                border: 1px solid#FFFFFF;
+                border-radius: 30px;
+                background: transparent;
+                padding: 10px 30px;
+            }
+            .home-title{
+                display: flex;
+                justify-content: space-around;
+            }
+            .home-text{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .home-text h1{
+                font-family: Lora;
+                font-size: 50px;
+                font-weight: 700;
+                color: #FFFFFF;
+                
+            }
+            .home-text h3{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 500;
+                color: #FFFFFF;
+                margin: 0;
+            }
+            .home-img img{
+                width: 300px;
+                height: 300px;
+                border: 5px solid#FFFFFF;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-top: 50px;
+            }
+            .home-img{
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 100px;
+            }
+            .home-social i{
+                color: #FFFFFF;
+                font-size: 30px;
+                margin-top: 20px;
+            }
+            .home-footer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+                
+            }
+            .home-footer h3{
+                font-family: Inter;
+                font-size: 20px;
+                font-weight: 600;
+                color: #FFFFFF;
+            }
+            .home-icon {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+    </style>
+    </head>
+<body>
+    <!--home-section -->
+    <div class="home-section">
+        <div class="home-navbar">
+            <h1>Earn SAU</h1>
+            <a href="./index.html" id="home">Home</a>
+            <a href="./aboutus.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./contact.html">
+                <button>Let’s talk</button>
+            </a>
+        </div>
+
+        <div class="home-title">
+            <div class="home-text">
+                <h1>Frontend web <br> developer !</h1>
+                <h3>Hi, I’m Earn SAU. A passionate Front-end <br> Web Developer based in Thailand.</h3>
+                <div class="home-social">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+            <div class="home-img">
+                 <img src="./images/me.JPG" alt="me">
+            </div>
+        </div>
+
+        <div class="home-footer">
+            <h3>My Tech Stacks</h3>
+            <div class="home-icon">
+                <img src="./images/html5.png" alt="html5">
+                <img src="./images/css3.png" alt="css3">
+                <img src="./images/javascript.png" alt="javascript">
+                <img src="./images/Node.js.png" alt="Node">
+                <img src="./images/react.png" alt="react">
+                <img src="./images/Spring.png" alt="Spring">
+                <img src="./images/Java.png" alt="java">
+                <img src="./images/Figma.png" alt="Figma">
+                <img src="./images/Firebase.png" alt="Firebase">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
